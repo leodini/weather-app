@@ -5,7 +5,7 @@ import Weather from './components/Weather';
 import './App.css';
 import Error from './components/Error'
 
-const API_KEY = '63410200ef9ffd44f210400340dd0165';
+const API_KEY = '63410200ef9ffd44f210400340dd016';
 
 const initialValues = [{temperature: '', city: '', country: '', humidity: '', description: ''}];
 
@@ -22,6 +22,7 @@ function App() {
     const country = event.target.country.value;
     if(city && country){
       setVisible({show: true});
+      setError({show: false});
       const api_call = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${API_KEY}&units=metric`);
       const data = await api_call.json();
        setWeather({ temperature: data.main.temp, city: data.name, country: data.sys.country, humidity: data.main.humidity, description: data.weather[0].description});

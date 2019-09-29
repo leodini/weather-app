@@ -1,5 +1,5 @@
 import React from 'react'
-import background from '../img/bg.jpg';
+
 
 export default function Sider(){
     return(

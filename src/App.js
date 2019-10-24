@@ -5,7 +5,7 @@ import Weather from './components/Weather';
 import './App.css';
 import Error from './components/Error'
 
-const API_KEY = '63410200ef9ffd44f210400340dd016';
+const API_KEY = '';
 
 const initialValues = [{temperature: '', city: '', country: '', humidity: '', description: ''}];
 
